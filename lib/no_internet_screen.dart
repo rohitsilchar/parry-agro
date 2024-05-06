@@ -21,12 +21,15 @@ class _NoInternetState extends State<NoInternet> {
       if (internetController.internetStatus.toString() == "NOINTERNET") {
         return const NoInternetScreen();
       } else {
-        return InAppWebView(
-          initialUrlRequest:
-              URLRequest(url: WebUri("https://parrymrltracker.com/")),
-          onWebViewCreated: (InAppWebViewController controller) {
-            _webViewController = controller;
-          },
+        return Scaffold(
+          resizeToAvoidBottomInset: true,
+          body: InAppWebView(
+            initialUrlRequest:
+                URLRequest(url: WebUri("https://parrymrltracker.com/")),
+            onWebViewCreated: (InAppWebViewController controller) {
+              _webViewController = controller;
+            },
+          ),
         );
       }
     });
