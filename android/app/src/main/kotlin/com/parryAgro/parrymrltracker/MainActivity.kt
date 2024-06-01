@@ -1,4 +1,4 @@
-package com.example.parrymrltracker
+package com.parryAgro.parrymrltracker
 
 import io.flutter.embedding.android.FlutterActivity
 
